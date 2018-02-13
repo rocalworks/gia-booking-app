@@ -1,0 +1,66 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    background-image: url(https://static.wixstatic.com/media/01c9a9_649e467ccab14e48851543f07448cabc~mv2_d_6000_4000_s_4_2.jpg/v1/fill/w_1920,h_1280,al_b,q_85,usm_0.66_1.00_0.01/01c9a9_649e467ccab14e48851543f07448cabc~mv2_d_6000_4000_s_4_2.webp);
+    background-repeat: space;
+    background-position: center center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.content {
+    margin: auto;
+    max-width: 1180px;
+    background-color: palegreen;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    background-color: darkslategray;
+}
+
+footer > .container {
+    margin: auto;
+}
+
+.footer-section-wrapper {
+    min-height: 150px;
+}
+
+.footer-section {
+    color: white;
+    height: 100%;
+    border: solid 1px gray;
+}
+
+.copyright {
+    padding: 20px;
+}
+
+.copyright-name {
+    color: white;
+    text-align: center;
+    margin: 0px;
+}
+
+/* Find some workaround to avoid manipulating bootstrap components directly */
+.col-md-4, .col-sm-6 {
+    padding: 0 !important;
+}
