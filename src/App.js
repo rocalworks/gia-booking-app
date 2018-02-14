@@ -9,22 +9,29 @@ class App extends Component {
     render() {
         return (
             <div className="wrapper">
+                { /* TODO: Set fonts to the ones in the website */}
                 <header className="header-brand">
-                    <a href="#" className="social-media-icons"><i className="fa fa-facebook-official fa-2x fa-fw"></i></a>
-                    <a href="#" className="social-media-icons"><i className="fa fa-twitter fa-2x fa-fw"></i></a>
-                    <a href="/" className="header-brand-name">Get In Atlanta</a>
-                    <a href="#" className="social-media-icons"><i className="fa fa-tripadvisor fa-2x fa-fw"></i></a>
-                    <a href="#" className="social-media-icons"><i className="fa fa-instagram fa-2x fa-fw"></i></a>
+                    <div>
+                        <a href="/" className="header-brand-name">Get In Atlanta</a>
+                    </div>
+                    <div>
+                        <a href="#" className="social-media-icons"><i className="fa fa-facebook-official fa-lg fa-fw"></i></a>
+                        <a href="#" className="social-media-icons"><i className="fa fa-twitter fa-lg fa-fw"></i></a>
+                        <a href="#" className="social-media-icons"><i className="fa fa-tripadvisor fa-lg fa-fw"></i></a>
+                        <a href="#" className="social-media-icons"><i className="fa fa-instagram fa-lg fa-fw"></i></a>
+                    </div>
                 </header>
-                
                 <Navbar collapseOnSelect>
+                    <Navbar.Header>
+                        <Navbar.Toggle />
+                    </Navbar.Header>
                     <Navbar.Collapse>
-                        <Nav bsClass="nav navbar-nav">
+                        <Nav>
                             <NavItem eventKey={1} href="#1">Home</NavItem>
                             <NavItem eventKey={1} href="#1">Guest Homes</NavItem>
                             <NavItem eventKey={2} href="#2">Explore</NavItem>
                             <NavItem eventKey={1} href="#1">Contact</NavItem>
-                            <NavItem eventKey={4} href="#4">Book Now</NavItem>
+                            <NavItem eventKey={4} href="#4" active>Book Now</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
