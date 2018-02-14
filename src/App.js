@@ -9,21 +9,22 @@ class App extends Component {
     render() {
         return (
             <div className="wrapper">
-                { /* TODO: Set fonts to the ones in the website */}
+                <header className="header-brand">
+                    <a href="#" className="social-media-icons"><i className="fa fa-facebook-official fa-2x fa-fw"></i></a>
+                    <a href="#" className="social-media-icons"><i className="fa fa-twitter fa-2x fa-fw"></i></a>
+                    <a href="/" className="header-brand-name">Get In Atlanta</a>
+                    <a href="#" className="social-media-icons"><i className="fa fa-tripadvisor fa-2x fa-fw"></i></a>
+                    <a href="#" className="social-media-icons"><i className="fa fa-instagram fa-2x fa-fw"></i></a>
+                </header>
+                
                 <Navbar collapseOnSelect>
-                    <Navbar.Header>
-                        <Navbar.Brand>
-                            <a>Get in Atlanta Inc.</a>
-                        </Navbar.Brand>
-                        <Navbar.Toggle />
-                    </Navbar.Header>
                     <Navbar.Collapse>
-                        <Nav pullRight>
+                        <Nav bsClass="nav navbar-nav">
                             <NavItem eventKey={1} href="#1">Home</NavItem>
                             <NavItem eventKey={1} href="#1">Guest Homes</NavItem>
                             <NavItem eventKey={2} href="#2">Explore</NavItem>
                             <NavItem eventKey={1} href="#1">Contact</NavItem>
-                            <NavItem eventKey={4} href="#4" active>Book Now</NavItem>
+                            <NavItem eventKey={4} href="#4">Book Now</NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
