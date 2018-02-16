@@ -113,7 +113,15 @@ footer > .container {
     margin: 0px;
 }
 
-/* Find some workaround to avoid manipulating bootstrap components directly */
+/* Custom Bootstrap codes  */
 .col-md-4, .col-sm-6 {
     padding: 0 !important;
+}
+
+.navbar-default {
+    background-color: white;
+}
+
+.navbar {
+    margin-bottom: 0px;
 }

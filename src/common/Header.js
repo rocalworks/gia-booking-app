@@ -1,8 +1,26 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, NavItem, Button, Glyphicon } from 'react-bootstrap';
-import { FormGroup, FormControl, ControlLabel } from 'react-bootstrap';
+import Search from './Search';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        
+        this.triggerSearch = this.triggerSearch.bind(this);
+        
+        this.state = {
+            openSearch: false
+        }
+    }
+    
+    triggerSearch(e) {
+        this.setState( () => { 
+            return {
+                openSearch: !this.state.openSearch
+            }
+        });
+    }
+    
     render() {
         return(
             <header>
@@ -15,8 +33,8 @@ class Header extends Component {
                         
                         <ul className="nav navbar-nav visible-xs">
                             <li className="pull-right">
-                                <Button bsStyle="success">
-                                    <Glyphicon glyph="search"/> Sea
+                                <Button bsStyle="success" onClick={this.triggerSearch}>
+                                    <Glyphicon glyph="search"/> Search
                                 </Button>
                             </li>
                         </ul>
@@ -24,7 +42,7 @@ class Header extends Component {
                     
                     <Navbar.Collapse>
                         <Nav bsClass="nav navbar-nav hidden-xs">
-                            <NavItem eventKey={2} href="#2">Search</NavItem>
+                            <NavItem eventKey={2} onSelect={this.triggerSearch}>Search</NavItem>
                         </Nav>
                         <Nav pullRight>
                             <NavItem eventKey={2} href="#2">Explore</NavItem>
@@ -32,6 +50,7 @@ class Header extends Component {
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>
+                <Search open={this.state.openSearch}/>
             </header>
         );
     }
