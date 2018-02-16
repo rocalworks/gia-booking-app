@@ -68,6 +68,7 @@ body {
 .newsletter, .sticky-newsletter {
     display: block;
     background-color: beige;
+    border: solid 1px lightgray;
 }
 
 .sticky-newsletter {
