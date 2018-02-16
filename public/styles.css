@@ -10,8 +10,10 @@ html {
 }
 
 body {
+    width: 100%;
     position: relative;
     margin: 0;
+    padding: 0;
     overflow-x: hidden;
 }
 
@@ -40,10 +42,11 @@ body {
     padding-right: 10px;
 }
 
+
 /* Search form goes here */
 
 #experience {
-    width: 100px;
+    width: 150px;
 }
 
 #check-in, #check-out {
@@ -62,6 +65,7 @@ body {
 .wrapper {
     width: 100vw;
     min-height: 100vh;
+    overflow-y: hidden;
 }
 
 .content {
@@ -69,8 +73,10 @@ body {
     max-width: 1180px;
 }
 
+
+/* Search results goes here. */
 .search-results {
-    
+    min-height: 130vh;
 }
 
 .house-list {
@@ -82,12 +88,13 @@ body {
     width: 50%;
     padding: 10px;
     display: inline-block;
-    background-color: beige;
+    background-color: #f5f5dc;
 }
 
 .house-item {
     border: solid 1px lightgray;
 }
+
 
 /* Newsletter here */
 
@@ -116,7 +123,7 @@ body {
 footer {
     position: absolute;
     bottom: 0;
-    width: 100vw;
+    width: 100%;
     background-color: darkslategray;
     z-index: 30;
     border-top: solid 1px #79cdcd;
@@ -163,4 +170,19 @@ footer > .container {
 .control-label {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+
+/* Supplementary styles goes here */
+.hidden {
+    display: none;
+}
+
+
+/* Some media queries in case of mobile */
+@media(max-width:767px){
+    .house-item-wrapper {
+        width: 100%;
+        display: block;
+    }
 }

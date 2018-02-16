@@ -31,6 +31,7 @@ class Search extends Component {
                                         { value: "party", display: "Party" },
                                         { value: "children", display: "Children" },
                                         { value: "etc", display: "Et Cetera" }
+                                        
                                     ]}
                                     />
                                 <InputFieldGroup

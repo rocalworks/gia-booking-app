@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import House from './../common/House';
+import { houses } from './../data/houses';
 
 class Home extends Component {
     render() {
@@ -9,13 +10,13 @@ class Home extends Component {
                 <div className="content">
                     <div className="search-results">
                         <ul className="house-list">
-                            { /* TODO: Create map for houses */}
-                            <li className="house-item-wrapper">
-                                <House house={{ id: "1" }} />
-                            </li>
-                            <li className="house-item-wrapper">
-                                <House house={{ id: "2" }} />
-                            </li>
+                            {
+                                houses.map( (house) => 
+                                    <li className="house-item-wrapper">
+                                        <House house={house} />
+                                    </li>
+                                )
+                            }
                         </ul>
                     </div>
                 </div>
