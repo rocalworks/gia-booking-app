@@ -6,7 +6,9 @@ class Home extends Component {
             <div className="container">
                 { /* TODO: Add parallax scrolling on background */ }
                 <div className="content">
-                    { /* TODO: Add Airbnb-style booking (use react-calendar maybe?) */}
+                    <div className="section">
+                        Test.
+                    </div>
                 </div>
             </div>
         );

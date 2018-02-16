@@ -15,6 +15,9 @@ body {
     overflow-x: hidden;
 }
 
+
+/* Header here */
+
 .header-brand {
     margin: auto;
     padding: 5px;
@@ -25,7 +28,7 @@ body {
 
 .header-brand-name {
     font-family: 'Quintessential', cursive;
-    font-size: 3em;
+    font-size: 2em;
     color: black;
     padding-left: 20px;
     padding-right: 20px;
@@ -37,19 +40,10 @@ body {
     padding-right: 10px;
 }
 
-.navbar-nav {
-    width: 100%;
-    text-align: center;
-}
-.navbar-nav > li {
-    float: none;
-    display: inline-block;
-}
+
+/* Content here */
 
 .wrapper {
-    background-image: url(https://static.wixstatic.com/media/01c9a9_649e467ccab14e48851543f07448cabc~mv2_d_6000_4000_s_4_2.jpg/v1/fill/w_1920,h_1280,al_b,q_85,usm_0.66_1.00_0.01/01c9a9_649e467ccab14e48851543f07448cabc~mv2_d_6000_4000_s_4_2.webp);
-    background-repeat: space;
-    background-position: center center;
     width: 100vw;
     min-height: 100vh;
 }
@@ -57,14 +51,42 @@ body {
 .content {
     margin: auto;
     max-width: 1180px;
-    background-color: palegreen;
 }
+
+.section {
+    background-color: deepskyblue;
+    height: 1020vh;
+}
+
+
+/* Newsletter here */
+
+.newsletter, .sticky-newsletter, newsletter-space {
+    height: 75px;
+}
+
+.newsletter, .sticky-newsletter {
+    display: block;
+    background-color: beige;
+}
+
+.sticky-newsletter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+}
+
+
+/* Footer here */
 
 footer {
     position: absolute;
     bottom: 0;
     width: 100vw;
     background-color: darkslategray;
+    z-index: 30;
 }
 
 footer > .container {
