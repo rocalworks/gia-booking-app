@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Panel } from 'react-bootstrap';
-import { FormGroup, FormControl, ControlLabel, HelpBlock, InputGroup } from 'react-bootstrap';
+import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'react-bootstrap';
 
 function FieldGroup({ id, label, help, ...props }) {
     return (
@@ -31,28 +31,28 @@ class Search extends Component {
                     <Panel.Body>
                         { /* TODO: Form goes here. */}
                         <div className="container">
-                            <FormGroup>
-                                <InputGroup>
+                            <Form inline>
+                                <FormGroup>
                                     <ControlLabel>Experience</ControlLabel>
                                     <FormControl componentClass="select" placeholder="select">
                                         <option value="Party"></option>
                                         <option value="Children"></option>
                                         <option value="Cat Here"></option>
                                     </FormControl>
-                                    <FieldGroup
-                                        id="check-in"
-                                        type="text"
-                                        label="Check In"
-                                        placeholder="mm/dd/yyyy"
-                                        />
-                                    <FieldGroup
-                                        id="check-out"
-                                        type="text"
-                                        label="Check Out"
-                                        placeholder="mm/dd/yyyy"
-                                        />
-                                </InputGroup>
-                            </FormGroup>
+                                </FormGroup>
+                                <FieldGroup
+                                    id="check-in"
+                                    type="text"
+                                    label="Check In"
+                                    placeholder="mm/dd/yyyy"
+                                    />
+                                <FieldGroup
+                                    id="check-out"
+                                    type="text"
+                                    label="Check Out"
+                                    placeholder="mm/dd/yyyy"
+                                    />
+                            </Form>
                         </div>
                     </Panel.Body>
                 </Panel.Collapse>
