@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
-import Newsletter from './Newsletter';
 
 class Footer extends Component {
     render() {
@@ -19,20 +18,21 @@ class Footer extends Component {
                                 </Col>
                                 <Col sm={6} md={4}>
                                     <div className="footer-section">
-                                        <p className="copyright-name">© 2018 Company Name Here</p>
+                                        
                                     </div>
                                 </Col>
                                 <Col sm={6} md={4}>
                                     <div className="footer-section">
                                         This is the third section. <br />
-
                                     </div>
                                 </Col>
                             </Row>
                         </Grid>
                     </div>
                 </div>
-                <Newsletter />
+                <div className="copyright">
+                    <p className="copyright-name">© 2018 Company Name Here</p>
+                </div>
             </footer>
         );
     }

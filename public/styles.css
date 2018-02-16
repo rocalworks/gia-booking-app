@@ -62,13 +62,14 @@ body {
 /* Newsletter here */
 
 .newsletter, .sticky-newsletter, newsletter-space {
-    height: 75px;
+    padding: 10px;
+    text-align: center;
 }
 
 .newsletter, .sticky-newsletter {
     display: block;
     background-color: beige;
-    border: solid 1px lightgray;
+    border-top: solid 1px lightgray;
 }
 
 .sticky-newsletter {
@@ -88,6 +89,7 @@ footer {
     width: 100vw;
     background-color: darkslategray;
     z-index: 30;
+    border-top: solid 1px #79cdcd;
 }
 
 footer > .container {
@@ -105,6 +107,7 @@ footer > .container {
 }
 
 .copyright {
+    border-top: solid 1px gray;
     padding: 20px;
 }
 
@@ -125,4 +128,9 @@ footer > .container {
 
 .navbar {
     margin-bottom: 0px;
+}
+
+.control-label {
+    padding-left: 10px;
+    padding-right: 10px;
 }

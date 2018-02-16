@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import { InputFieldGroup } from './FieldGroup';
 
 class Newsletter extends Component {
     render() {
@@ -8,8 +10,18 @@ class Newsletter extends Component {
             <div className={addSticky}>
                 <div className="newsletter-space"></div>
                 <div className="newsletter-content">
-                    <div className="content">
+                    <div className="container">
                         { /* TODO: Add content here. */}
+                        
+                        <Form inline>
+                            <InputFieldGroup
+                                id="newsletter"
+                                type="email"
+                                label="Subscribe to get the latest updates in GetInAtlanta"
+                                placeholder="your.email@provider.com"
+                                />
+                            <Button type="submit">Submit</Button>
+                        </Form>
                     </div>
                 </div>
             </div>

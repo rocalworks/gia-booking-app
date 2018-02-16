@@ -1,16 +1,6 @@
 import React, { Component } from 'react';
-import { Panel } from 'react-bootstrap';
-import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'react-bootstrap';
-
-function FieldGroup({ id, label, help, ...props }) {
-    return (
-        <FormGroup controlId={id}>
-            <ControlLabel>{label}</ControlLabel>
-            <FormControl {...props} />
-            {help && <HelpBlock>{help}</HelpBlock>}
-        </FormGroup>
-    );
-}
+import { Panel, Form } from 'react-bootstrap';
+import { SelectFieldGroup, InputFieldGroup } from './FieldGroup';
 
 class Search extends Component {
     constructor(props) {
@@ -32,25 +22,34 @@ class Search extends Component {
                         { /* TODO: Form goes here. */}
                         <div className="container">
                             <Form inline>
-                                <FormGroup>
-                                    <ControlLabel>Experience</ControlLabel>
-                                    <FormControl componentClass="select" placeholder="select">
-                                        <option value="Party"></option>
-                                        <option value="Children"></option>
-                                        <option value="Cat Here"></option>
-                                    </FormControl>
-                                </FormGroup>
-                                <FieldGroup
+                                { /* TODO: Reflect option from the actual data */ }
+                                <SelectFieldGroup
+                                    id="experience"
+                                    label="Experience"
+                                    options={[ 
+                                        { value: "none", display: "< select >" },
+                                        { value: "party", display: "Party" },
+                                        { value: "children", display: "Children" },
+                                        { value: "etc", display: "Et Cetera" }
+                                    ]}
+                                    />
+                                <InputFieldGroup
                                     id="check-in"
                                     type="text"
                                     label="Check In"
                                     placeholder="mm/dd/yyyy"
                                     />
-                                <FieldGroup
+                                <InputFieldGroup
                                     id="check-out"
                                     type="text"
                                     label="Check Out"
                                     placeholder="mm/dd/yyyy"
+                                    />
+                                <InputFieldGroup
+                                    id="numGuests"
+                                    type="number"
+                                    label="Guests"
+                                    placeholder="0"
                                     />
                             </Form>
                         </div>
