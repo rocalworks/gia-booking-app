@@ -20,7 +20,7 @@ class Newsletter extends Component {
                                 label="Subscribe to get the latest updates in GetInAtlanta"
                                 placeholder="your.email@provider.com"
                                 />
-                            <Button type="submit">Submit</Button>
+                            <Button bsStyle="success" type="submit">Submit</Button>
                         </Form>
                     </div>
                 </div>

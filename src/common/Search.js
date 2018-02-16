@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Panel, Form } from 'react-bootstrap';
+import { Panel, Form, Button } from 'react-bootstrap';
 import { SelectFieldGroup, InputFieldGroup } from './FieldGroup';
 
 class Search extends Component {
@@ -35,13 +35,13 @@ class Search extends Component {
                                     />
                                 <InputFieldGroup
                                     id="check-in"
-                                    type="text"
+                                    type="date"
                                     label="Check In"
                                     placeholder="mm/dd/yyyy"
                                     />
                                 <InputFieldGroup
                                     id="check-out"
-                                    type="text"
+                                    type="date"
                                     label="Check Out"
                                     placeholder="mm/dd/yyyy"
                                     />
@@ -49,8 +49,10 @@ class Search extends Component {
                                     id="numGuests"
                                     type="number"
                                     label="Guests"
-                                    placeholder="0"
+                                    placeholder="1"
+                                    min="1"
                                     />
+                                <Button bsStyle="success" type="submit" id="btn-submit">Submit</Button>
                             </Form>
                         </div>
                     </Panel.Body>
