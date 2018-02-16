@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
 class House extends Component {
-    constructor(props) {
-        super(props);
-    }
-    
     render() {
         return(
             <div className="house-item">
-                House number {this.props.house.id}
+                House ID: {this.props.house.id} <br />
+                Experience: {this.props.house.experience} <br />
+                Max Guests: {this.props.house.maxGuests} <br />
             </div>
         );
     }

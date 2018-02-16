@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { InputFieldGroup } from './FieldGroup';
+import { InputFieldGroup } from './../utilities/FieldGroup';
 
 class Newsletter extends Component {
     render() {

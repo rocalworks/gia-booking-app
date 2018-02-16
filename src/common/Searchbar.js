@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import { Panel, Form, Button } from 'react-bootstrap';
-import { SelectFieldGroup, InputFieldGroup } from './FieldGroup';
+import { SelectFieldGroup, InputFieldGroup } from './../utilities/FieldGroup';
 
-class Search extends Component {
+class Searchbar extends Component {
     constructor(props) {
         super(props);
         
+        this.updateFilter = this.updateFilter.bind(this);
         this.handleToggle = this.handleToggle.bind(this);
     }
     
     handleToggle(e) {
         // Do something while open?
         console.log("Search open!" + e);
+    }
+    
+    updateFilter(e) {
+        // console.log(e.target.id);
+        // this.props.updateFilter(e.target, e.target.value);
+        this.props.updateFilter(e.target.id, e.target.value);
     }
     
     render() {
@@ -33,18 +40,21 @@ class Search extends Component {
                                         { value: "etc", display: "Et Cetera" }
                                         
                                     ]}
+                                    onChange={this.updateFilter}
                                     />
                                 <InputFieldGroup
                                     id="check-in"
                                     type="date"
                                     label="Check In"
                                     placeholder="mm/dd/yyyy"
+                                    onChange={this.updateFilter}
                                     />
                                 <InputFieldGroup
                                     id="check-out"
                                     type="date"
                                     label="Check Out"
                                     placeholder="mm/dd/yyyy"
+                                    onChange={this.updateFilter}
                                     />
                                 <InputFieldGroup
                                     id="numGuests"
@@ -52,8 +62,9 @@ class Search extends Component {
                                     label="Guests"
                                     placeholder="1"
                                     min="1"
+                                    onChange={this.updateFilter}
                                     />
-                                <Button bsStyle="success" type="submit" id="btn-submit">Submit</Button>
+                                <Button bsStyle="danger" type="reset">Reset</Button>
                             </Form>
                         </div>
                     </Panel.Body>
@@ -63,4 +74,4 @@ class Search extends Component {
     }
 }
 
-export default Search;
+export default Searchbar;
