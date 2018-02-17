@@ -21,7 +21,7 @@ class Search extends Component {
         let newHouseList = [];
         
         for (var house of houses) {
-            let validateExp = this.isNull(filter, "experience") || house.experience.includes(filter.experience);
+            let validateExp = this.isNull(filter, "experience") || house.experience.includes(filter.experience) || filter.experience === "none";
             let validateNumGuests = this.isNull(filter, "numGuests") || house.maxGuests >= filter.numGuests;
             
             if (validateExp && validateNumGuests) {
