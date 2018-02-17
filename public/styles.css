@@ -98,7 +98,19 @@ body {
 
 /* Newsletter here */
 
-.newsletter, .sticky-newsletter, newsletter-space {
+.newsletter-space {
+    padding: 20px;
+}
+
+
+.subscription-overflow {
+    display: block;
+    padding: 10px;
+    background-color: black;
+    color: white;
+}
+
+.newsletter, .sticky-newsletter {
     padding: 10px;
     text-align: center;
 }
@@ -109,7 +121,7 @@ body {
     border-top: solid 1px lightgray;
 }
 
-.sticky-newsletter {
+.sticky-newsletter, .subscription-overflow {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -184,5 +196,13 @@ footer > .container {
     .house-item-wrapper {
         width: 100%;
         display: block;
+    }
+    
+    #experience, #check-in, #check-out, #numGuests, #btn-reset {
+        width: 100%;
+    }
+    
+    .subscription-wrapper  {
+        margin: 0px !important;
     }
 }

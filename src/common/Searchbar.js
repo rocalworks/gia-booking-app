@@ -64,7 +64,7 @@ class Searchbar extends Component {
                                     min="1"
                                     onChange={this.updateFilter}
                                     />
-                                <Button bsStyle="danger" type="reset">Reset</Button>
+                                <Button bsStyle="danger" type="reset" id="btn-reset">Reset</Button>
                             </Form>
                         </div>
                     </Panel.Body>

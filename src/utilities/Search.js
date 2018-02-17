@@ -20,7 +20,6 @@ class Search extends Component {
     filterHouses(filter) {
         let newHouseList = [];
         
-        { /* TODO: Convert this into rule-firing */ }
         for (var house of houses) {
             let validateExp = this.isNull(filter, "experience") || house.experience.includes(filter.experience);
             let validateNumGuests = this.isNull(filter, "numGuests") || house.maxGuests >= filter.numGuests;
@@ -38,7 +37,7 @@ class Search extends Component {
     }
     
     isNull(obj, key) {
-        return( !Object.keys(obj).includes(key) || obj[key] == undefined );
+        return( !Object.keys(obj).includes(key) || obj[key] === undefined );
         
     }
     
