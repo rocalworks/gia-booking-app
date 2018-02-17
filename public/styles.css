@@ -99,7 +99,7 @@ body {
 /* Newsletter here */
 
 .newsletter-space {
-    padding: 20px;
+    padding: 175px;
 }
 
 
@@ -151,8 +151,10 @@ footer > .container {
 
 .footer-section {
     color: white;
+    padding: 10px;
     height: 100%;
-    border: solid 1px gray;
+    border-top: solid 1px gray;
+    border-bottom: solid 1px gray;
 }
 
 .copyright {
@@ -165,6 +167,22 @@ footer > .container {
     text-align: center;
     margin: 0px;
 }
+
+.payment-list {
+    list-style: none;
+    padding: 0px !important;
+}
+
+.card {
+    display: inline-block;
+}
+
+.payment-image {
+    width: 80px;
+    height: 55px;
+    padding: 5px;
+}
+
 
 /* Custom Bootstrap codes  */
 .col-md-4, .col-sm-6 {
