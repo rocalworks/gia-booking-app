@@ -23,8 +23,10 @@ class Header extends Component {
                     </Navbar.Header>
                     
                     <Navbar.Collapse>
-                        <Nav bsClass="nav navbar-nav hidden-xs">
-                            <NavItem eventKey={1} onClick={this.props.toggleSearch}>Search</NavItem>
+                        <Nav bsClass="nav navbar-nav hidden-xs btn-search">
+                            <NavItem eventKey={1} onClick={this.props.toggleSearch}>
+                                <p className="nav-highlight"><Glyphicon glyph="search"/> Search Here </p>
+                            </NavItem>
                         </Nav>
                         <Nav pullRight>
                             <NavItem eventKey={2} href="#2">Explore</NavItem>

@@ -42,6 +42,15 @@ body {
     padding-right: 10px;
 }
 
+.btn-search {
+    border-color: #080808;
+}
+
+.nav-highlight {
+    margin: 0px !important;
+    font-weight: bold;
+}
+
 
 /* Search form goes here */
 
