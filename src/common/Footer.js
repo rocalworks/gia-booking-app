@@ -17,10 +17,10 @@ class Footer extends Component {
                                         <div className="footer-payment">
                                             We Accept
                                             <ul className="payment-list">
-                                                <li className="card"><img className="payment-image" src="/images/cards/visa.png" /></li>
-                                                <li className="card"><img className="payment-image" src="/images/cards/paypal.png" /></li>
-                                                <li className="card"><img className="payment-image" src="/images/cards/aexpress.png" /></li>
-                                                <li className="card"><img className="payment-image" src="/images/cards/mastercard.png" /></li>
+                                                <li className="card"><img className="payment-image" src="/images/cards/visa.png" alt="visa"/></li>
+                                                <li className="card"><img className="payment-image" src="/images/cards/paypal.png" alt="paypal"/></li>
+                                                <li className="card"><img className="payment-image" src="/images/cards/aexpress.png" alt="american express"/></li>
+                                                <li className="card"><img className="payment-image" src="/images/cards/mastercard.png" alt="mastercard"/></li>
                                             </ul>
                                         </div>
                                         <div className="footer-subscription">
