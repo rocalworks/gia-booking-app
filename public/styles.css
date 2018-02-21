@@ -129,6 +129,13 @@ body {
     color: white;
 }
 
+
+.house-name:hover {
+    text-decoration: none !important;
+    color: yellow !important;
+    cursor: pointer !important;
+}
+
 .house-reviews {
     font-size: 2em;
     color: white;
