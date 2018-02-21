@@ -1,58 +1,56 @@
 export const houses = [
-    {
-        id: "house1",
-        imageURL: "https://a0.muscache.com/im/pictures/bbe383de-3962-4a38-9976-74bd2709c461.jpg",
-        experience: ["party"], 
-        isAvailable: true,
-        maxGuests: 2
-    }, 
-    {
-        id: "house2",
-        imageURL: "https://a0.muscache.com/im/pictures/b634e8ed-9d23-4aea-8bf4-ead8349aab4f.jpg",
-        experience: ["party", "children"], 
-        isAvailable: true,
-        maxGuests: 2
-    }, 
-    {
-        id: "house3",
-        imageURL: "https://a0.muscache.com/im/pictures/32956562/3eefc762_original.jpg",
-        experience: ["children"], 
-        isAvailable: true,
-        maxGuests: 5
-    }, 
-    {
-        id: "house4",
-        imageURL: "https://a0.muscache.com/im/pictures/63997483/3ed50a0f_original.jpg",
-        experience: ["children"], 
-        isAvailable: true,
-        maxGuests: 5
-    }, 
-    {
-        id: "house5",
-        imageURL: "https://a0.muscache.com/im/pictures/ff6e8f24-8e58-435a-85c5-9bb94e28d66b.jpg",
-        experience: ["party", "etc"], 
-        isAvailable: true,
-        maxGuests: 7
-    }, 
-    {
-        id: "house6",
-        imageURL: "https://a0.muscache.com/im/pictures/47612197/e266f113_original.jpg",
-        experience: ["etc"], 
-        isAvailable: true,
-        maxGuests: 1
-    }, 
-    {
-        id: "house7",
-        imageURL: "https://a0.muscache.com/im/pictures/070e2e64-9bdd-4351-b1d4-22a8901d92ac.jpg",
-        experience: ["party", "children", "etc"], 
-        isAvailable: true,
-        maxGuests: 12
-    }, 
-    {
-        id: "house8",
-        imageURL: "https://a0.muscache.com/im/pictures/6fd28dba-bd6b-4995-afc6-c088b6ed2632.jpg",
-        experience: ["party"], 
-        isAvailable: true,
-        maxGuests: 15
-    }, 
+  {
+    "id": "deerwood",
+    "name": "DeerWood",
+    "airbrblink": "https://www.airbnb.com/rooms/21191142",
+    "imageURL": "https://a0.muscache.com/im/pictures/bbe383de-3962-4a38-9976-74bd2709c461.jpg",
+    "reviews": 4,
+    "experience": "",
+    "maxGuests": 8,
+    "description": "Description of DeerWood goes here",
+    "rooms": 3,
+    "beds": 4,
+    "baths": 2.5,
+    "withParking": "yes",
+    "amenities": "wifi; dryer; TV; hangers; washer; iron; shampoo; hair dryer; essentials; heating; air conditioning; private entrance",
+    "safety features": "smoke detector; first aid kit; fire extinguisher",
+    "restrictions": "no smoking; not suitable for pets; no parties or events",
+    "homeIsNear": ""
+  },
+  {
+    "id": "wee-kirk",
+    "name": "Wee Kirk",
+    "airbrblink": "https://www.airbnb.com/rooms/14823536",
+    "imageURL": "https://a0.muscache.com/im/pictures/b634e8ed-9d23-4aea-8bf4-ead8349aab4f.jpg",
+    "reviews": 4.5,
+    "experience": "",
+    "maxGuests": 6,
+    "description": "Description of Wee Kirk 2 goes here",
+    "rooms": 3,
+    "beds": 3,
+    "baths": 1,
+    "withParking": "yes",
+    "amenities": "kitchen; wifi; cable TV; dryer; hangers; washer; iron; shampoo; hair dryer; essentials; heating; air conditioning",
+    "safety features": "smoke detector; carbon monoxide detector; first aid kit; safety card; fire extinguisher",
+    "restrictions": "no smoking; not suitable for pets; no parties or events",
+    "homeIsNear": ""
+  },
+  {
+    "id": "vinson",
+    "name": "Vinson",
+    "airbrblink": "https://www.airbnb.com/rooms/16032699",
+    "imageURL": "https://a0.muscache.com/im/pictures/32956562/3eefc762_original.jpg",
+    "reviews": 5,
+    "experience": "",
+    "maxGuests": 8,
+    "description": "Description of Vinson goes here",
+    "rooms": 3,
+    "beds": 4,
+    "baths": 2,
+    "withParking": "yes",
+    "amenities": "kitchen; wifi; breakfast; laptop-friendly; dryer; TV; hangers; washer; iron; shampoo; hair dryer; essentials; heating; air conditioning",
+    "safety features": "smoke detector; carbon monoxide detector; first aid kit; fire extinguisher",
+    "restrictions": "no smoking; not suitable for pets; no parties or events",
+    "homeIsNear": ""
+  }
 ];

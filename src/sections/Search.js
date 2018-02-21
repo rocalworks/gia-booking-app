@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import House from './../common/House';
+import House from './../sections/House';
 import { houses } from './../data/houses';
+
 
 class Search extends Component {
     constructor(props) {
@@ -21,6 +22,8 @@ class Search extends Component {
         let newHouseList = [];
         
         for (var house of houses) {
+            if (newHouseList.length > 4) break;
+            
             let validateExp = this.isNull(filter, "experience") || house.experience.includes(filter.experience) || filter.experience === "none";
             let validateNumGuests = this.isNull(filter, "numGuests") || house.maxGuests >= filter.numGuests;
             
@@ -46,7 +49,7 @@ class Search extends Component {
             <div className="search-results">
                 <ul className="house-list">
                     {
-                        this.state.houseList.map( (house) => 
+                        this.state.houseList.slice(0, 4).map( (house) => 
                             <li key={house.id} className="house-item-wrapper">
                                 <House house={house} />
                             </li>

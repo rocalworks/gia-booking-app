@@ -15,7 +15,6 @@ export function SelectFieldGroup({ id, label, options, help, ...props}) {
     return (
         <FormGroup controlId={id}>
             <ControlLabel>{label}</ControlLabel>
-            { /* TODO: Reflect option from the actual data */ }
             <FormControl componentClass="select" onChange={props.onChange}>
                 {
                     options.map( (option) =>  

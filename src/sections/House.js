@@ -7,7 +7,7 @@ class House extends Component {
                 <img className="house-image" src={this.props.house.imageURL} alt={this.props.house.id} />
                 Experience: {this.props.house.experience} <br />
                 Max Guests: {this.props.house.maxGuests} <br />
-                Description: "Lorem ipsum here"
+                Description: {this.props.house.description}
             </div>
         );
     }

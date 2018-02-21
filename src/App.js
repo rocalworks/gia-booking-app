@@ -3,16 +3,19 @@ import Header from './common/Header';
 import Footer from './common/Footer';
 import Newsletter from './common/Newsletter';
 import Home from './pages/Home';
+import SearchForm from './sections/SearchForm';
 
 class App extends Component {
     constructor(props) {
         super(props);
         
         this.toggleSearch = this.toggleSearch.bind(this);
+        this.toggleSidebar = this.toggleSidebar.bind(this);
         this.updateFilter = this.updateFilter.bind(this);
         
         this.state = {
             openSearch: false,
+            openSidebar: false,
             setFilter: false,
             searchFilter: { }
         }
@@ -22,6 +25,14 @@ class App extends Component {
         this.setState( () => { 
             return {
                 openSearch: !this.state.openSearch
+            }
+        });
+    }
+    
+    toggleSidebar(e) {
+        this.setState( () => { 
+            return {
+                openSidebar: !this.state.openSidebar
             }
         });
     }
@@ -57,18 +68,18 @@ class App extends Component {
     
     render() {
         return (
-            <div className="wrapper">
-                <Header 
-                    openSearch={this.state.openSearch} 
-                    toggleSearch={this.toggleSearch}
-                    updateFilter={this.updateFilter}
-                    />
-                <Home 
-                    searchFilter={this.state.searchFilter} 
-                    setFilter={this.state.setFilter}
-                    />
-                <Newsletter sticky />
-                <Footer />
+            <div>
+                <div className="wrapper">
+                    <Header updateFilter={this.updateFilter} />
+                    <SearchForm updateFilter={this.updateFilter}/>
+                    <Home 
+                        searchFilter={this.state.searchFilter} 
+                        setFilter={this.state.setFilter}
+                        updateFilter={this.updateFilter}
+                        />
+                    <Newsletter sticky />
+                    <Footer />
+                </div>
             </div>
         );
     }
