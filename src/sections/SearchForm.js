@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { SelectFieldGroup, InputFieldGroup, CheckboxGroup } from './../utilities/FieldGroup';
+import { SelectFieldGroup, InputFieldGroup } from './../utilities/FieldGroup';
 
 class SearchForm extends Component {
     constructor(props) {
@@ -63,6 +63,14 @@ class SearchForm extends Component {
                             id="numGuests"
                             type="number"
                             label="Guests"
+                            placeholder="1"
+                            min="1"
+                            onChange={this.setFilter}
+                            />
+                        <InputFieldGroup
+                            id="numRooms"
+                            type="number"
+                            label="Rooms"
                             placeholder="1"
                             min="1"
                             onChange={this.setFilter}
