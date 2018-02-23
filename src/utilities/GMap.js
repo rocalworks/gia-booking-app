@@ -8,7 +8,7 @@ export const GMap = compose (
     withProps({
         googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCLY4eXd-dir72J6sCWMsKNIRfXEGi9kzQ&v=3.exp&libraries=geometry,drawing,places",
         loadingElement: <div style={{ height: `100%` }} />,
-        containerElement: <div style={{ height: `250px` }} />,
+        containerElement: <div style={{ height: `350px` }} />,
         mapElement: <div style={{ height: `100%` }} />,
     }),
     withScriptjs,

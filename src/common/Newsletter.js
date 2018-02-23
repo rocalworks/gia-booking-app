@@ -90,13 +90,12 @@ class Newsletter extends Component {
         let addSticky = (this.props.sticky ? "sticky-" : "") + "newsletter";
         let newsletter = <DesktopNewsletter label="Subscribe to get the latest updates in GetInAtlanta"/>
         
-        if (this.state.isMobile) {
+        if (this.state.isMobile && this.props.sticky) {
             newsletter = <MobileNewsletter placeholder="Updates? Subscribe now!"/>
         } 
         
         return(
             <div>
-                <div className="newsletter-space"></div>
                 <div className={addSticky}>
                     <div className="newsletter-content">
                         <div className="container">

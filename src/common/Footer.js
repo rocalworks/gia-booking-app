@@ -23,32 +23,21 @@ class Footer extends Component {
                                                 <li className="card"><img className="payment-image" src="/images/cards/mastercard.png" alt="mastercard"/></li>
                                             </ul>
                                         </div>
-                                        <div className="footer-subscription">
-                                            Subscribe to our newsletter!
-                                            <Form inline>
-                                                <InputFieldGroup
-                                                    id="subscription-email"
-                                                    type="email"
-                                                    placeholder="your.email@provider.com"
-                                                    />
-                                                <Button bsStyle="success" type="submit">  Submit</Button>
-                                            </Form>
+                                        <div className="footer-contact">
+                                            Contact Us
+                                            <div className="address-bar">
+                                                Address:
+                                                1270 Caroline St., Ste D120
+                                                Atlanta, GA 30317
+                                            </div>
+                                            <div className="telephone">
+                                                Telephone No: 123-4567
+                                            </div>
                                         </div>
                                     </div>
                                 </Col>
                                 <Col sm={6} md={6}>
                                     <div className="footer-section">
-                                        <div className="footer-contact">
-                                            Contact Us
-                                        </div>
-                                        <div className="address-bar">
-                                            Address:
-                                            1270 Caroline St., Ste D120
-                                            Atlanta, GA 30317
-                                        </div>
-                                        <div className="telephone">
-                                            Telephone No: 123-4567
-                                        </div>
                                         <GMap /> 
                                     </div>
                                 </Col>
