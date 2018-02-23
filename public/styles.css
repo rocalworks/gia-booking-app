@@ -15,6 +15,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: #fcfaf4;
 }
 
 
@@ -63,6 +64,15 @@ body {
 .content {
     margin: auto;
     max-width: 1180px;
+}
+
+
+/* Section header goes here */
+
+.homes-header, .review-header, .stories-header {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 3em;
 }
 
 
@@ -169,16 +179,27 @@ body {
 
 
 /* User review pane goes here */
-.review-wrapper {
-    height: 200px;
-    background-color: sandybrown;
+.review-section, .stories-section {
+    height: 70vh;
+}
+
+.review-section {
+    background-color: #ff7d63;
+}
+
+.stories-section {
+    background-color: #fcfaf4;
+}
+
+.review-wrapper, .stories-wrapper {
+    padding: 20px;
 }
 
 
 /* Newsletter here */
 
 .newsletter-space {
-    padding: 210px;
+    padding: 195px;;
 }
 
 .subscription-overflow {
@@ -195,8 +216,10 @@ body {
 
 .newsletter, .sticky-newsletter {
     display: block;
-    background-color: beige;
-    border-top: solid 3px #B4906C;
+    background-color: #303030;
+    border-top: solid 3px #ff7d63;
+    color: white;
+    font-size: 1.25em;
 }
 
 .sticky-newsletter, .subscription-overflow {
@@ -214,9 +237,9 @@ footer {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: #282828;
+    background-color: #303030;
     z-index: 30;
-    border-top: solid 1px #79cdcd;
+    border-top: solid 5px #ff7d63;
 }
 
 footer > .container {
@@ -231,12 +254,10 @@ footer > .container {
     color: white;
     padding: 10px;
     height: 100%;
-    border-top: solid 1px gray;
-    border-bottom: solid 1px gray;
 }
 
 .copyright {
-    border-top: solid 1px gray;
+    border-top: solid 1px #ff9b87;
     padding: 20px;
 }
 

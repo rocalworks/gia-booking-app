@@ -67,14 +67,6 @@ class SearchForm extends Component {
                             min="1"
                             onChange={this.setFilter}
                             />
-                        <InputFieldGroup
-                            id="numRooms"
-                            type="number"
-                            label="Rooms"
-                            placeholder="1"
-                            min="1"
-                            onChange={this.setFilter}
-                            />
                         <Button bsStyle="danger" type="reset" id="btn-reset">Reset</Button>
                         
                     </Form>
