@@ -1,62 +1,86 @@
 import React, { Component } from 'react';
 
-const Slide = (props) => (
-    <div className="slide-wrapper" style={props.styles}>
-        Slide # {props.index} here.
-    </div>
-);
+class Slide extends Component {
+    render() {
+        const image = {
+            backgroundImage: "url(" + this.props.current.image + ")"
+        }
+        
+        return(
+            <div className="slide-wrapper" style={this.props.styles}>
+                <div className="slide-title">
+                    {this.props.current.title}
+                </div>
+                <div className="slide-image" style={image}></div>
+                <div className="slide-caption">
+                    <span className="slide-content">{this.props.current.content}</span>
+                    <span className="slide-name">{this.props.current.name}</span>
+                </div>
+            </div>
+        );
+    }
+};
 
 class Slider extends Component {
     constructor(props) {
         super(props);
-        
-        this.prevSlide = this.prevSlide.bind(this);
-        this.nextSlide = this.nextSlide.bind(this);
         
         this.state = {
             index: 0
         }
     }
     
-    prevSlide(e) {
-        this.moveSlider(-1);
+    componentDidMount() {
+        this.interval = setInterval(() => this.setSlider(), this.props.slideInterval);
     }
     
-    nextSlide(e) {
-        this.moveSlider(1);
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
     
-    moveSlider(direction) {
-        let newIndex = 0;
+    setSlider() {
+        let currentIndex = this.state.index === this.props.content.length - 1 ? 0 : this.state.index + 1; 
         
-        if (this.state.index <= 0 && direction !== 1) {
-            newIndex = this.props.slides.length - 1;
-        } else if (this.state.index >= this.props.slides.length - 1  && direction !== -1) {
-            newIndex = 0;
-        } else {
-            newIndex = this.state.index + direction
-        }
-        
+        this.setState( () => {
+            return {
+                index: currentIndex
+            }
+        });
+    }
+
+    moveSlider(newIndex, e) {
+        clearInterval(this.interval);
         this.setState( () => {
             return {
                 index: newIndex
             }
         });
+        this.interval = setInterval(() => this.setSlider(), this.props.slideInterval);
+    }
+    
+    sliderButtons() {
+        let buttons = [];
+        
+        for(let i = 0; i < this.props.content.length; i++) {
+            let moveSlider = this.moveSlider.bind(this, i);
+            let active = i === this.state.index ? "inverted" : ""
+            
+            buttons.push(<li key={"btn-slide-" + i} className={`btn-slide ${active}`} onClick={moveSlider}>&#9673;</li>)
+        }
+        
+        return buttons;
     }
     
     render() {
-        const transparent = this.props.transparent ? "transparent" : "";
-        
         return(
             <div className="slider-wrapper">
-                <div className={`btn-slider-left ${transparent}`} onClick={this.prevSlide}>
-                    <span className="btn-slider" onClick={this.prevSlide}><i className="icon-chevron-left"></i></span>
-                </div>
-                <div className={`btn-slider-right  ${transparent}`} onClick={this.nextSlide}>
-                    <span className="btn-slider" onClick={this.nextSlide}><i className="icon-chevron-right"></i></span>
-                </div>
                 <div className="slider-content">
-                    <Slide index={this.state.index} styles={this.props.styles}/>
+                    <Slide styles={this.props.styles} current={this.props.content[this.state.index]}/>    
+                </div>
+                <div className="slider-buttons-wrapper">
+                    <ul className="slider-buttons">
+                        {this.sliderButtons()}
+                    </ul>
                 </div>
             </div>
         );

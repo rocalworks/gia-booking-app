@@ -202,44 +202,57 @@ body {
 
 .slider-wrapper {
     width: 100%;
-    height: calc(70vh - 180px);
 }
 
 .slider-content {
     height: inherit;
 }
 
+.slider-buttons {
+    list-style: none;
+    padding: 0px !important;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn-slide {
+    display: inline;
+    padding: 0 5px 0 5px;
+    cursor: pointer;
+}
+
+.btn-slide:hover {
+    filter: invert(100%);
+}
+
+/* Slide goes here */
 .slide-wrapper {
     padding: 20px;
     height: 100%;
+    text-align: center;
 }
 
-.btn-slider-left, .btn-slider-right {
-    height: 100%;
-    padding: 0 15px 0 15px;
-    vertical-align: middle;
-    line-height: calc(70vh - 180px);
+.slide-title {
+    padding: 0 0 20px 0;
 }
 
-.btn-slider {
-    font-size: 2em;
-    color: white;
+.slide-image {
+    max-width: 800px;
+    height: 350px;
+    border-radius: 5px;
+    margin: auto;
+    background-size: cover;
+    background-position: 25% 50%;
 }
 
-.btn-slider:hover {
-    color: black;
-    cursor:pointer;
-    
+
+.slide-caption {
+    margin-top: 20px;
+    height: 90px;
 }
 
-.btn-slider-left {
-    float: left;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-}
-
-.btn-slider-right {
-    float: right;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+.slide-content, .slide-name {
+    display: block;
 }
 
 
@@ -303,10 +316,6 @@ footer > .container {
     height: 100%;
 }
 
-.footer-contact {
-    margin-bottom: 20px;
-}
-
 .copyright {
     border-top: solid 1px #ff9b87;
     padding: 20px;
@@ -328,8 +337,8 @@ footer > .container {
 }
 
 .payment-image {
-    width: 80px;
-    height: 55px;
+    width: 75px;
+    height: 50px;
     padding: 5px;
 }
 
@@ -375,7 +384,32 @@ footer > .container {
     color: none;
 }
 
+.inverted {
+    filter: invert(100%);
+}
+
 /* Media queries goes here */
+@media(max-width: 550px) {
+    .review-section, .stories-section {
+        height: auto;
+    }
+    
+    .homes-header, .review-header, .stories-header {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 2em;
+    }
+    
+    .review-wrapper, .stories-wrapper {
+        padding: 0px;
+    }
+    
+    .slide-image {
+        width: 100%;
+        height: 200px;
+    }
+}
+
 @media(max-width: 767px) {
     .house-item-wrapper {
         width: 100%;
@@ -400,6 +434,10 @@ footer > .container {
     
     .house-item {
         width: 100%;
+    }
+    
+    .slide-content {
+        padding: 0px;
     }
 }
 

@@ -5,12 +5,12 @@ import { reviews } from './../data/reviews';
 class Reviews extends Component {
     render() {
         const styles = {
-            backgroundColor: "rgba(255, 255, 255, 0.05)"
-        }
+            backgroundColor: "none"
+        };
         
         return(
             <div>
-                <Slider slides={reviews} styles={styles} transparent />
+                <Slider content={reviews} styles={styles} slideInterval={5000} />
             </div>
         );
     }

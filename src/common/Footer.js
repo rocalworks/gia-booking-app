@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Form, Button } from 'react-bootstrap';
+import { Grid, Row, Col } from 'react-bootstrap';
 import { GMap } from './../utilities/GMap';
-import { InputFieldGroup } from './../utilities/FieldGroup';
 
 class Footer extends Component {
     render() {

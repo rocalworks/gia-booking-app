@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Search from './../sections/Search';
 import Reviews from './../sections/Reviews';
+import ShortStories from './../sections/ShortStories';
 
 class Home extends Component {
     render() {
@@ -26,7 +27,7 @@ class Home extends Component {
                     <div className="container">
                         <div className="stories-header">Learn Atlanta</div>
                         <div className="stories-wrapper">
-                            <Reviews />
+                            <ShortStories />
                         </div>
                     </div>
                 </div>
