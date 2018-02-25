@@ -6,15 +6,19 @@ class Slide extends Component {
             backgroundImage: "url(" + this.props.current.image + ")"
         }
         
+        const title = this.props.current.title ? 
+              <div className="slide-title"> {this.props.current.title} </div> : null;
+        
+        const name = this.props.current.name ? 
+              <span className="slide-name">~ {this.props.current.name} ~</span> : null;
+        
         return(
             <div className="slide-wrapper" style={this.props.styles}>
-                <div className="slide-title">
-                    {this.props.current.title}
-                </div>
+                {title}
                 <div className="slide-image" style={image}></div>
                 <div className="slide-caption">
-                    <span className="slide-content">{this.props.current.content}</span>
-                    <span className="slide-name">{this.props.current.name}</span>
+                    <span className="slide-content">"{this.props.current.content}"</span>
+                    {name}
                 </div>
             </div>
         );

@@ -52,8 +52,8 @@ class House extends Component {
                 </div>
                 <div className="house-options">
                     <ButtonGroup justified>
-                        <Button bsStyle="primary">View More</Button>
-                        <Button bsStyle="danger">Book Now</Button>
+                        <Button id="btn-more">View More</Button>
+                        <Button id="btn-book">Book Now</Button>
                     </ButtonGroup>
                 </div>
             </div>

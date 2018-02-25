@@ -11,7 +11,7 @@ function DesktopNewsletter(props) {
                 label={props.label}
                 placeholder="your.email@provider.com"
                 />
-            <Button bsStyle="success" type="submit">Submit</Button>
+            <Button bsStyle="primary" type="submit">Submit</Button>
         </Form>
     );
 }
@@ -55,7 +55,7 @@ class MobileNewsletter extends Component {
                                 placeholder="your.email@provider.com"
                                 />
                             <InputGroup.Button>
-                                <Button>Subscribe</Button>
+                                <Button bsStyle="primary">Subscribe</Button>
                             </InputGroup.Button>
                         </InputGroup>
                     </FormGroup>

@@ -16,6 +16,7 @@ body {
     padding: 0;
     overflow-x: hidden;
     background-color: #fcfaf4;
+    font-family: 'Catamaran', sans-serif;
 }
 
 
@@ -73,6 +74,7 @@ body {
     text-align: center;
     padding-top: 20px;
     font-size: 3em;
+    font-family: 'Vidaloka', serif;
 }
 
 
@@ -81,7 +83,12 @@ body {
 .search-form, .adv-search-form {
     padding-top: 15px;
     padding-bottom: 15px;
-    background-color: beige;
+    background-color: rgba(87, 188, 144, 0.25);
+    margin: auto;
+}
+
+.search-form > .container {
+    text-align: center;
 }
 
 #experience {
@@ -97,6 +104,10 @@ body {
     width: 75px;
 }
 
+#btn-reset {
+    width: 100px;
+    margin-left: 20px;
+}
 
 /* Search results and house section goes here. */
 .search-wrapper {
@@ -118,6 +129,7 @@ body {
 
 .house-item {
     width: 100%;
+    height: 100%;
     padding: 10px;
     border-right: outset 1px #A37E58;
     border-bottom: solid 2px #A37E58;
@@ -136,11 +148,15 @@ body {
     background: linear-gradient(rgba(50, 50, 50, 1), rgba(255, 255, 255, 0));
 }
 
-.house-name {
-    font-size: 2em;
+.house-name, .house-reviews {
+    font-size: 3vh;
     color: white;
+   font-family: 'Philosopher', sans-serif;
 }
 
+.house-name {
+    font-weight: bold;
+}
 
 .house-name:hover {
     text-decoration: none !important;
@@ -149,9 +165,12 @@ body {
 }
 
 .house-reviews {
-    font-size: 2em;
-    color: white;
     float: right;
+}
+
+.house-reviews:hover {
+    color: yellow;
+    text-decoration: none;
 }
 
 .house-highlights {
@@ -170,14 +189,19 @@ body {
     border-top: solid 1px rgb(200, 200, 200);
 }
 
-.house-options {
-    
-}
-
 .btn-options {
     width: 50%;
 }
 
+#btn-more {
+    background-color: skyblue;
+}
+
+#btn-book {
+    font-weight: bolder;
+    text-transform: uppercase;
+    background-color: #00ff63;
+}
 
 
 /* User review pane goes here */
@@ -186,7 +210,7 @@ body {
 }
 
 .review-section {
-    background-color: #ff7d63;
+    background-color: #57BC90;
 }
 
 .stories-section {
@@ -194,7 +218,7 @@ body {
 }
 
 .review-wrapper, .stories-wrapper {
-    padding: 20px;
+    padding: 0px;
 }
 
 
@@ -251,8 +275,20 @@ body {
     height: 90px;
 }
 
-.slide-content, .slide-name {
+.slide-content, .slide-name, .slide-title {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 2.25vh;
     display: block;
+}
+
+.slide-title {
+    font-weight: bold;
+    font-size: 2.5vh;
+}
+
+.slide-name {
+    font-size: 2vh;
+    opacity: 0.6;
 }
 
 
@@ -297,9 +333,9 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    background-color: #303030;
+    background-color: #1A2930;
     z-index: 30;
-    border-top: solid 5px #ff7d63;
+    border-top: solid 5px #3cc47c;
 }
 
 footer > .container {
@@ -316,8 +352,21 @@ footer > .container {
     height: 100%;
 }
 
+.footer-payment, .footer-contact, .footer-subscribe {
+    margin-bottom: 15px;
+    font-weight: 350;
+    font-size: 2vh;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.address-bar, .telephone {
+    font-weight: normal;    
+    font-size: 1.5vh;
+    font-family: 'Catamaran', sans-serif;
+}
+
 .copyright {
-    border-top: solid 1px #ff9b87;
+    border-top: solid 1px #3cc47c;
     padding: 20px;
 }
 
@@ -325,6 +374,7 @@ footer > .container {
     color: white;
     text-align: center;
     margin: 0px;
+    font-size: 1.75vh;
 }
 
 .payment-list {
@@ -373,6 +423,10 @@ footer > .container {
     width: 50%;
 }
 
+.navbar-right {
+    font-size: 1.6vh;
+}
+
 
 /* Other supplementary styles goes here */
 .hidden {
@@ -398,10 +452,6 @@ footer > .container {
         text-align: center;
         padding-top: 10px;
         font-size: 2em;
-    }
-    
-    .review-wrapper, .stories-wrapper {
-        padding: 0px;
     }
     
     .slide-image {
@@ -436,12 +486,54 @@ footer > .container {
         width: 100%;
     }
     
+    .slide-caption {
+        height: 150px;
+    }
+    
     .slide-content {
         padding: 0px;
+    }
+    
+    .footer-payment, .footer-contact, .footer-subscribe {
+        margin-bottom: 10px;
+        font-size: 3vh;
+    }
+    
+    .address-bar, .telephone, .copyright-name {
+        font-size: 2vh;
+    }
+}
+
+@media(max-width: 1199px) {
+    .search-form > .container {
+        text-align: center;
+    }
+    
+    #btn-reset {
+        margin: 0px;
     }
 }
 
 @media(min-width: 768px) and (max-width: 1199px) {
+    .form-inline .form-group {
+        display: inline-block;
+        width: 50%;
+    }
+    
+    .form-group {
+        padding: 0 10px 0 10px;
+    }
+    
+    #btn-reset {
+        width: 100%;
+        display: block;
+    }
+    
+    #experience, #check-in, #check-out, #numGuests {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
     .house-list {
         flex-wrap: wrap;
     }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import { GMap } from './../utilities/GMap';
+import { FormGroup, InputGroup, FormControl, Button } from 'react-bootstrap';
 
 class Footer extends Component {
     render() {
@@ -25,13 +26,27 @@ class Footer extends Component {
                                         <div className="footer-contact">
                                             Contact Us
                                             <div className="address-bar">
-                                                Address:
-                                                1270 Caroline St., Ste D120
+                                                1270 Caroline St., Ste D120 <br />
                                                 Atlanta, GA 30317
                                             </div>
                                             <div className="telephone">
                                                 Telephone No: 123-4567
                                             </div>
+                                        </div>
+                                        <div className="footer-subscribe">
+                                            Subscribe to get the latest updates in GetInAtlanta
+                                            <FormGroup bsClass="form-group subscription-wrapper">
+                                                <InputGroup>
+                                                    <FormControl 
+                                                        id="subscription-email" 
+                                                        type="email" 
+                                                        placeholder="your.email@provider.com"
+                                                        />
+                                                    <InputGroup.Button>
+                                                        <Button bsStyle="primary">Subscribe</Button>
+                                                    </InputGroup.Button>
+                                                </InputGroup>
+                                            </FormGroup>
                                         </div>
                                     </div>
                                 </Col>

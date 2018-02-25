@@ -46,6 +46,14 @@ class SearchForm extends Component {
                             onChange={this.setFilter}
                             />
                         <InputFieldGroup
+                            id="numGuests"
+                            type="number"
+                            label="Guests"
+                            placeholder="1"
+                            min="1"
+                            onChange={this.setFilter}
+                            />
+                        <InputFieldGroup
                             id="check-in"
                             type="date"
                             label="Check In"
@@ -57,14 +65,6 @@ class SearchForm extends Component {
                             type="date"
                             label="Check Out"
                             placeholder="mm/dd/yyyy"
-                            onChange={this.setFilter}
-                            />
-                        <InputFieldGroup
-                            id="numGuests"
-                            type="number"
-                            label="Guests"
-                            placeholder="1"
-                            min="1"
                             onChange={this.setFilter}
                             />
                         <Button bsStyle="danger" type="reset" id="btn-reset">Reset</Button>
